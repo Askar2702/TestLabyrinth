@@ -14,6 +14,10 @@ public class Move : MonoBehaviour
         _player = GetComponent<Player>();
         _player.SetMove.AddListener(SetMove);
     }
+    private void Start()
+    {
+        _posStart = transform.position;
+    }
     void Update()
     {
         _meshAgent.SetDestination(_target.position);

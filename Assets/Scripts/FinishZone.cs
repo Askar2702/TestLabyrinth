@@ -16,6 +16,7 @@ public class FinishZone : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             GameManager.instance.FinishGame();
+            Destroy(gameObject);
         }
     }
 
